@@ -31,4 +31,5 @@ require("lazy").setup({
 	require("plugins.misc"),
 	require("plugins.comment"),
 	require("plugins.none-ls"),
+	require("plugins.prettier"),
 })
