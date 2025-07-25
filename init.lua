@@ -32,5 +32,6 @@ require("lazy").setup({
 	require("plugins.comment"),
 	require("plugins.none-ls"),
 	require("plugins.prettier"),
-	require("plugins.matze")
+	require("plugins.matze"),
+	require("plugins.multicursor")
 })
