@@ -5,7 +5,7 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
-    '3rd/image.nvim', -- Optional image support in preview window: See `# Preview Mode` for more information
+    -- '3rd/image.nvim', -- Optional image support in preview window: See `# Preview Mode` for more information
     {
       's1n7ax/nvim-window-picker',
       version = '2.*',
@@ -71,10 +71,19 @@ return {
           folder_closed = '',
           folder_open = '',
           folder_empty = '󰜌',
-          -- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
-          -- then these will never be used.
           default = '*',
           highlight = 'NeoTreeFileIcon',
+          provider = function(icon, node, state)
+            if node.type == "file" or node.type == "terminal" then
+              local ok, web_devicons = pcall(require, "nvim-web-devicons")
+              local name = node.type == "terminal" and "terminal" or node.name
+              if ok then
+                local devicon, hl = web_devicons.get_icon(name)
+                icon.text = devicon or icon.text
+                icon.highlight = "NeoTreeFileIcon"
+              end
+            end
+          end,
         },
         modified = {
           symbol = '[+]',

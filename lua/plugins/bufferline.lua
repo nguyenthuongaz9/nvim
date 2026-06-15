@@ -43,17 +43,40 @@ return {
       },
       highlights = {
         separator = {
-          fg = '#434C5E',
+          fg = '#222222',
+        },
+        separator_selected = {
+          fg = '#444444',
         },
         buffer_selected = {
+          fg = '#ffffff',
+          bg = '#000000',
           bold = true,
           italic = false,
         },
-        -- separator_selected = {},
-        -- tab_selected = {},
-        -- background = {},
-        -- indicator_selected = {},
-        -- fill = {},
+        buffer_visible = {
+          fg = '#888888',
+          bg = '#111111',
+        },
+        background = {
+          fg = '#444444',
+          bg = '#111111',
+        },
+        tab_selected = {
+          fg = '#ffffff',
+          bg = '#000000',
+        },
+        tab = {
+          fg = '#666666',
+          bg = '#111111',
+        },
+        indicator_selected = {
+          fg = '#ffffff',
+          bg = '#000000',
+        },
+        fill = {
+          bg = '#111111',
+        },
       },
     }
   end,

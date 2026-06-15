@@ -131,11 +131,13 @@
 
 
 return {
-  "nyoom-engineering/oxocarbon.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.opt.background = "dark" -- hoặc "light"
-    vim.cmd("colorscheme oxocarbon")
-  end,
+  {
+    dir = vim.fn.stdpath("config") .. "/colors",
+    name = "gothic",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme gothic")
+    end,
+  },
 }

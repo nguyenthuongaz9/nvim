@@ -37,10 +37,48 @@ return {
       cond = hide_in_width,
     }
 
+    local gothic_theme = {
+      normal = {
+        a = { fg = '#ffffff', bg = '#111111' },
+        b = { fg = '#aaaaaa', bg = '#111111' },
+        c = { fg = '#cccccc', bg = '#111111' },
+      },
+      insert = {
+        a = { fg = '#ffffff', bg = '#222222' },
+        b = { fg = '#aaaaaa', bg = '#111111' },
+        c = { fg = '#cccccc', bg = '#111111' },
+      },
+      visual = {
+        a = { fg = '#ffffff', bg = '#333333' },
+        b = { fg = '#aaaaaa', bg = '#111111' },
+        c = { fg = '#cccccc', bg = '#111111' },
+      },
+      replace = {
+        a = { fg = '#ffffff', bg = '#222222' },
+        b = { fg = '#aaaaaa', bg = '#111111' },
+        c = { fg = '#cccccc', bg = '#111111' },
+      },
+      command = {
+        a = { fg = '#ffffff', bg = '#222222' },
+        b = { fg = '#aaaaaa', bg = '#111111' },
+        c = { fg = '#cccccc', bg = '#111111' },
+      },
+      terminal = {
+        a = { fg = '#ffffff', bg = '#111111' },
+        b = { fg = '#aaaaaa', bg = '#111111' },
+        c = { fg = '#cccccc', bg = '#111111' },
+      },
+      inactive = {
+        a = { fg = '#666666', bg = '#000000' },
+        b = { fg = '#666666', bg = '#000000' },
+        c = { fg = '#666666', bg = '#000000' },
+      },
+    }
+
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'nord', -- Set theme based on environment variable
+        theme = gothic_theme,
         -- Some useful glyphs:
         -- https://www.nerdfonts.com/cheat-sheet
         --        

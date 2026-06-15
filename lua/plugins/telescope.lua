@@ -109,5 +109,10 @@ return {
 				prompt_title = "Live Grep in Open Files",
 			})
 		end, { desc = "[S]earch [/] in Open Files" })
+
+		-- Find text in all files (like VSCode Ctrl+Shift+F)
+		vim.keymap.set({ "n", "v", "i" }, "<C-S-g>", function()
+			require("telescope.builtin").live_grep()
+		end, { desc = "Find text in all files" })
 	end,
 }
